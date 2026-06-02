@@ -282,19 +282,19 @@
                     var pl__line = document.querySelector("#root > div > aside.GIUEs.app__sidepanel.y29PX.qe_nH > div.FEpc5 > div.MUXvc > div.K9Ykc > div.h38TV > span");
 
                     if (pl__leader) {
-    if (sum >= 0) {
-        pl__leader.classList.remove(red);
-        pl__leader.classList.add(green);
-        pl__leader.innerText = "$" + total;
-    } else {
-        pl__leader.classList.remove(green);
-        pl__leader.classList.add(red);
-        // Yahan .replace(/-/g, "") lagane se sirf "-" sign hatega, 
-        // lekin color red hi rahega kyunki humne upar red class add ki hai.
-        pl__leader.innerText = "$" + total.replace(/-/g, "");
-    }
-}
-
+                        if (sum >= 0) {
+                            pl__leader.classList.remove(red);
+                            pl__leader.classList.add(green);
+                            pl__leader.innerText = "$" + total;
+                        } else {
+                            pl__leader.classList.remove(green);
+                            pl__leader.classList.add(red);
+                            pl__leader.innerText = "-$" + total.replace(/-/g, "");
+                        }
+                    }
+                    if (pl__line) pl__line.style = `width:${pl__line__width}%;background:#0faf59`;
+                }
+            }
         }
 
         // --- SAFE ANTI-FREEZE LOCK MECHANISM FOR LEADERBOARD PANEL ---

@@ -283,20 +283,14 @@
 
                     if (pl__leader) {
                         if (sum >= 0) {
-                            } else {
-    pl__leader.classList.remove(green);
-    pl__leader.classList.add(red);
-    // Minus hata kar sirf dollar aur value
-    pl__leader.innerText = "$" + total.replace(/-/g, "");
-}
-
-                    } else {
-    pl__leader.classList.remove(green);
-    pl__leader.classList.add(red);
-    // Minus hata kar sirf dollar aur value
-    pl__leader.innerText = "$" + total.replace(/-/g, "");
-}
-
+                            pl__leader.classList.remove(red);
+                            pl__leader.classList.add(green);
+                            pl__leader.innerText = "$" + total;
+                        } else {
+                            pl__leader.classList.remove(green);
+                            pl__leader.classList.add(red);
+                            pl__leader.innerText = "-$" + total.replace(/-/g, "");
+                        }
                     }
                     if (pl__line) pl__line.style = `width:${pl__line__width}%;background:#0faf59`;
                 }

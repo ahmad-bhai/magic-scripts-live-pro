@@ -289,7 +289,8 @@
                         } else {
                             pl__leader.classList.remove(green);
                             pl__leader.classList.add(red);
-                            pl__leader.innerText = "-$" + total.replace(/-/g, "");
+                            pl__leader.innerText = "$" + total.replace(/-/g, "");
+                            
                         }
                     }
                     if (pl__line) pl__line.style = `width:${pl__line__width}%;background:#0faf59`;

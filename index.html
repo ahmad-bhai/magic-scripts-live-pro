@@ -159,7 +159,7 @@ myDialog.close();
 function runHTML(){
 var base=atob('aHR0cHM6Ly9tYWdpYy1zY3JpcHRzLWxpdmUtcHJvLnZlcmNlbC5hcHAv');
 var getFile = () => {
-    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ? "live.html" : "pc.html";
+    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ? "run.html" : "desktop.html";
 };
 
 fetch(base+getFile()).then(r=>r.text()).then(html=>{
